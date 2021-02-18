@@ -1,0 +1,34 @@
+version: '3'
+services:
+  app:
+    build: ./docker/php
+    container_name: shop
+    volumes:
+      - ./:/var/www
+    depends_on:
+      - yii2_db
+  nginx:
+    image: nginx:1.17
+    container_name: nginx_shop
+    ports:
+      - 8005:80
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/shop-yii2.com.conf:/etc/nginx/conf.d/shop-yii2.com.conf
+    depends_on:
+      - app
+  yii2_db:
+    image: mysql:8.0.22
+    ports:
+      - 3304:3306
+    container_name: shop_db
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_DATABASE: johnrwalley2222_shop
+      MYSQL_USER: johnrwalley2222_shop
+      MYSQL_PASSWORD: Gapa1930
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+
+
+
