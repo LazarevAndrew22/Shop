@@ -136,6 +136,7 @@
                 <li class="item-cart">
                     <div class="product-img-wrap">
                         <a href="#" title="Product"><img src="<?= Yii::$app->request->baseUrl ?>/img/product/cart_product_1.jpg" alt="Product" class="img-responsive"></a>
+
                     </div>
                     <div class="product-details">
                         <div class="inner-left">
@@ -589,9 +590,9 @@
             <div class="row">
                 <div class="col-md-7 col-sm-6 col-xs-12">
                     <div class="about-sm">
-                        <div class="hover-images">
-                            <img src="<?= Yii::$app->request->baseUrl ?>/img/about/small_img.jpg" class="img-responsive" alt="">
-                        </div>
+<!--                        <div class="hover-images">-->
+<!--                            <img src="--><?//= Yii::$app->request->baseUrl ?><!--/img/about/small_img.jpg" class="img-responsive" alt="">-->
+<!--                        </div>-->
                     </div>
                     <div class="about-info">
 
@@ -632,36 +633,36 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="about-brand">
-            <div class="owl-carousel owl-theme js-owl-team">
-                <div class="brand-item">
-                    <a href="" class="hover-images"><img src="<?= Yii::$app->request->baseUrl ?>/img/about/brand-urbane.png" class="img-responsive" alt=""></a>
-                </div>
-                <div class="brand-item">
-                    <a href="" class="hover-images"><img src="<?= Yii::$app->request->baseUrl ?>/img/about/brand-nordic.png" class="img-responsive" alt=""></a>
-                </div>
-                <div class="brand-item">
-                    <a href="" class="hover-images"><img src="<?= Yii::$app->request->baseUrl ?>/img/about/brand-cupcake.jpg" class="img-responsive" alt=""></a>
-                </div>
-                <div class="brand-item">
-                    <a href="" class="hover-images"><img src="<?= Yii::$app->request->baseUrl ?>/img/about/brand-moment.png" class="img-responsive" alt=""></a>
-                </div>
-                <div class="brand-item">
-                    <a href="" class="hover-images"><img src="<?= Yii::$app->request->baseUrl ?>/img/about/brand-antonio.png" class="img-responsive" alt=""></a>
-                </div>
-                <div class="brand-item">
-                    <a href="" class="hover-images"><img src="<?= Yii::$app->request->baseUrl ?>/img/about/brand-arttech.png" class="img-responsive" alt=""></a>
-                </div>
-                <div class="brand-item">
-                    <a href="" class="hover-images"><img src="<?= Yii::$app->request->baseUrl ?>/img/about/brand-arttech.png" class="img-responsive" alt=""></a>
-                </div>
-                <div class="brand-item">
-                    <a href="" class="hover-images"><img src="<?= Yii::$app->request->baseUrl ?>/img/about/brand-arttech.png" class="img-responsive" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="container">-->
+<!--        <div class="about-brand">-->
+<!--            <div class="owl-carousel owl-theme js-owl-team">-->
+<!--                <div class="brand-item">-->
+<!--                    <a href="" class="hover-images"><img src="--><?//= Yii::$app->request->baseUrl ?><!--/img/brand-urbane.png" class="img-responsive" alt=""></a>-->
+<!--                </div>-->
+<!--                <div class="brand-item">-->
+<!--                    <a href="" class="hover-images"><img src="--><?//= Yii::$app->request->baseUrl ?><!--/img/brand-nordic.png" class="img-responsive" alt=""></a>-->
+<!--                </div>-->
+<!--                <div class="brand-item">-->
+<!--                    <a href="" class="hover-images"><img src="--><?//= Yii::$app->request->baseUrl ?><!--/img/brand-cupcake.jpg" class="img-responsive" alt=""></a>-->
+<!--                </div>-->
+<!--                <div class="brand-item">-->
+<!--                    <a href="" class="hover-images"><img src="--><?//= Yii::$app->request->baseUrl ?><!--/img/brand-moment.png" class="img-responsive" alt=""></a>-->
+<!--                </div>-->
+<!--                <div class="brand-item">-->
+<!--                    <a href="" class="hover-images"><img src="--><?//= Yii::$app->request->baseUrl ?><!--/img/brand-antonio.png" class="img-responsive" alt=""></a>-->
+<!--                </div>-->
+<!--                <div class="brand-item">-->
+<!--                    <a href="" class="hover-images"><img src="--><?//= Yii::$app->request->baseUrl ?><!--/img/brand-arttech.png" class="img-responsive" alt=""></a>-->
+<!--                </div>-->
+<!--                <div class="brand-item">-->
+<!--                    <a href="" class="hover-images"><img src="--><?//= Yii::$app->request->baseUrl ?><!--/img/brand-arttech.png" class="img-responsive" alt=""></a>-->
+<!--                </div>-->
+<!--                <div class="brand-item">-->
+<!--                    <a href="" class="hover-images"><img src="--><?//= Yii::$app->request->baseUrl ?><!--/img/brand-arttech.png" class="img-responsive" alt=""></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="newsletter">
         <div class="container">
             <div class="row">

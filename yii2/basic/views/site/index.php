@@ -107,7 +107,7 @@ AppAsset::register($this);
                 <a href="#">Pages</a>
                 <span class="icon-sub-menu"></span>
                 <ul class="menu-level1 js-open-menu">
-                    <li class="level2"><a href="/yii2/basic/web/site/about" title="About Us ">About Us </a></li>
+                    <li class="level2"><a href="<?=Yii::$app->request->baseUrl?>/site/about" title="About Us ">About Us </a></li>
                     <li class="level2"><a href="contactus.html" title="Contact">Contact</a></li>
                     <li class="level2"><a href="faq.html" title="FAQs">FAQs</a></li>
                     <li class="level2"><a href="404.html" title="404">404</a></li>
@@ -150,7 +150,7 @@ AppAsset::register($this);
             <ul class="list">
                 <li class="item-cart">
                     <div class="product-img-wrap">
-                        <a href="#" title="Product"><img src="yii2/basic/web/img/product/cart_product_1.jpg" alt="Product" class="img-responsive"></a>
+                        <a href="#" title="Product"><img src="<?= Yii::$app->request->baseUrl ?>/img/product/cart_product_1.jpg" alt="Product" class="img-responsive"></a>
                     </div>
                     <div class="product-details">
                         <div class="inner-left">
@@ -170,7 +170,7 @@ AppAsset::register($this);
                 </li>
                 <li class="item-cart">
                     <div class="product-img-wrap">
-                        <a href="#" title="Product"><img src="yii2/basic/web/img/product/cart_product_2.jpg" alt="Product" class="img-responsive"></a>
+                        <a href="#" title="Product"><img src="<?= Yii::$app->request->baseUrl ?>/img/product/cart_product_2.jpg" alt="Product" class="img-responsive"></a>
                     </div>
                     <div class="product-details">
                         <div class="inner-left">
@@ -245,55 +245,12 @@ AppAsset::register($this);
             <div class="tab-content">
                 <div id="login" class="tab-pane fade in active">
                     <div class="row">
+
                         <div class="col-md-4">
-                            <form method="post" class="form-customer form-login">
+                            <form method="post" class="form-customer form-login" action="/site/login">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">E-mail *</label>
-                                    <input type="email" class="form-control form-account" id="exampleInputEmail1">
-                                </div>
-                                <div class="form-group">
-                                    <label for="zoaname">Name</label>
-                                    <input type="text" class="form-control form-account" id="zoaname">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Password *</label>
-                                    <input type="password" class="form-control form-account" id="exampleInputPassword1">
-                                </div>
-                                <div class="btn-button-group mg-top-30 mg-bottom-15">
-                                    <button type="submit" class="zoa-btn btn-login hover-white">Sign Up</button>
-                                </div>
-                            </form>
-                            <div class="social-group-button">
-                                <a href="" class="twitter button">
-                                    <div class="slide">
-                                        <p>
-                                            Connect with Twitter
-                                        </p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="fa fa-twitter">
-                                        </i>
-                                    </div>
-                                </a>
-                                <a href="" class="facebook button">
-                                    <div class="slide">
-                                        <p>
-                                            Connect with Facebook
-                                        </p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="fa fa-facebook">
-                                        </i>
-                                    </div>
-                                </a>
-                            </div>
-                            <span class="text-note">Already have an account? <a href="">Sign In!</a></span>
-                        </div>
-                        <div class="col-md-4">
-                            <form method="post" class="form-customer form-register">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail2">E-mail</label>
-                                    <input type="email" class="form-control form-account" id="exampleInputEmail2">
+                                        <label for="username ">E-mail</label>
+                                    <input type="email" class="form-control form-account" id="username">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword3">Password</label>
@@ -337,23 +294,23 @@ AppAsset::register($this);
                             </div>
                             <span class="text-note">Don’t have an account? <a href="">Register!</a></span>
                         </div>
-                        <div class="col-md-4">
-                            <form method="post" class="form-customer form-reset">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail5">E-mail *</label>
-                                    <input type="email" class="form-control form-account" id="exampleInputEmail5">
-                                </div>
-                                <div class="btn-button-group mg-top-30 mg-bottom-15">
-                                    <button type="submit" class="zoa-btn btn-login hover-white">Reset Password</button>
-                                </div>
-                            </form>
-                        </div>
+<!--                        <div class="col-md-4">-->
+<!--                            <form method="post" class="form-customer form-reset">-->
+<!--                                <div class="form-group">-->
+<!--                                    <label for="exampleInputEmail5">E-mail *</label>-->
+<!--                                    <input type="email" class="form-control form-account" id="exampleInputEmail5">-->
+<!--                                </div>-->
+<!--                                <div class="btn-button-group mg-top-30 mg-bottom-15">-->
+<!--                                    <button type="submit" class="zoa-btn btn-login hover-white">Reset Password</button>-->
+<!--                                </div>-->
+<!--                            </form>-->
+<!--                        </div>-->
                     </div>
                 </div>
                 <div id="register" class="tab-pane fade">
                     <div class="row">
                         <div class="col-md-4">
-                            <form method="post" class="form-customer form-login">
+                            <form method="post" class="form-customer form-register">
                                 <div class="form-group">
                                     <label for="exampleInputEmail7">E-mail *</label>
                                     <input type="email" class="form-control form-account" id="exampleInputEmail7">
@@ -396,65 +353,7 @@ AppAsset::register($this);
                             </div>
                             <span class="text-note">Already have an account? <a href="">Sign In!</a></span>
                         </div>
-                        <div class="col-md-4">
-                            <form method="post" class="form-customer form-register">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail6">E-mail</label>
-                                    <input type="email" class="form-control form-account" id="exampleInputEmail6">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword4">Password</label>
-                                    <input type="password" class="form-control form-account" id="exampleInputPassword4">
-                                </div>
-                                <div class="flex justify-content-between mg-30">
-                                    <div class="checkbox">
-                                        <input data-val="true" data-val-required="The Remember me? field is required." id="RememberMe2" name="RememberMe" type="checkbox" value="true" />
-                                        <input name="RememberMe" type="hidden" value="false" />
-                                        <label for="RememberMe2">Remember me</label>
-                                    </div>
-                                    <a href="" class="text-note no-mg">Forgot Password?</a>
-                                </div>
-                                <div class="btn-button-group mg-top-30 mg-bottom-15">
-                                    <button type="submit" class="zoa-btn btn-login hover-white">Sign In</button>
-                                </div>
-                            </form>
-                            <div class="social-group-button">
-                                <a href="" class="twitter button">
-                                    <div class="slide">
-                                        <p>
-                                            Connect with Twitter
-                                        </p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="fa fa-twitter">
-                                        </i>
-                                    </div>
-                                </a>
-                                <a href="" class="facebook button">
-                                    <div class="slide">
-                                        <p>
-                                            Connect with Facebook
-                                        </p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="fa fa-facebook">
-                                        </i>
-                                    </div>
-                                </a>
-                            </div>
-                            <span class="text-note">Don’t have an account? <a href="">Register!</a></span>
-                        </div>
-                        <div class="col-md-4">
-                            <form method="post" class="form-customer form-reset">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail4">E-mail *</label>
-                                    <input type="email" class="form-control form-account" id="exampleInputEmail4">
-                                </div>
-                                <div class="btn-button-group mg-top-30 mg-bottom-15">
-                                    <button type="submit" class="zoa-btn btn-login hover-white">Reset Password</button>
-                                </div>
-                            </form>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -469,7 +368,7 @@ AppAsset::register($this);
                 <div class="row flex align-items-center justify-content-between">
 
                     <div class="col-md-9 col-xs-6 col-sm-6 col2 flex align-items-center">
-                        <div class="zoa-logo"><a href="#"><img src="yii2/basic/web/img/logo_trans.png" alt="" class="img-reponsive"></a></div>
+                        <div class="zoa-logo"><a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/img/logo_trans.png" alt="" class="img-reponsive"></a></div>
                         <ul class="nav navbar-nav js-menubar hidden-xs hidden-sm">
                             <li class="level1 active dropdown"><a href="#" title="Home">Home</a>
                                 <span class="plus js-plus-icon"></span>
@@ -507,7 +406,7 @@ AppAsset::register($this);
                                         <li class="level2 col-4a">
                                             <a href="#" title="shop page">Shop Pages</a>
                                             <ul class="menu-level-2">
-                                                <li class="level3"><a href="/yii2/basic/web/site/shop" title="Shop page v2">Shop page v2 </a></li>
+                                                <li class="level3"><a href="/site/shop" title="Shop page v2">Shop page v2 </a></li>
                                             </ul>
                                         </li>
                                         <li class="level2 col-4a">
@@ -522,7 +421,7 @@ AppAsset::register($this);
                                         <li class="level2 col-4a">
                                             <div class="demo-img">
                                                 <a href="#" class="effect-img3 plus-zoom">
-                                                    <img src="yii2/basic/web/img/collection_4.jpg" alt="" class="img-reponsive">
+                                                    <img src="<?= Yii::$app->request->baseUrl ?>/img/collection_4.jpg" alt="" class="img-reponsive">
 
                                                 </a>
                                             </div>
@@ -537,8 +436,8 @@ AppAsset::register($this);
                                     <div class="row">
                                         <div class="cate-item col-md-4 col-sm-12">
                                             <div class="demo-img">
-                                                <a href="/yii2/basic/web/site/shop" class="effect-img3 plus-zoom">
-                                                    <img src="yii2/basic/web/img/collection_1.jpg" alt="" class="img-reponsive">
+                                                <a href="/site/shop" class="effect-img3 plus-zoom">
+                                                    <img src="<?= Yii::$app->request->baseUrl ?>/img/collection_1.jpg" alt="" class="img-reponsive">
 
                                                 </a>
                                             </div>
@@ -546,13 +445,13 @@ AppAsset::register($this);
                                         </div>
                                         <div class="cate-item col-md-4 col-sm-12">
                                             <div class="demo-img">
-                                                <a class="effect-img3 plus-zoom" href="/yii2/basic/web/site/shop"><img src="yii2/basic/web/img/collection_2.jpg" alt="" class="img-reponsive"></a>
+                                                <a class="effect-img3 plus-zoom" href="/site/shop"><img src="<?= Yii::$app->request->baseUrl ?>/img/collection_2.jpg" alt="" class="img-reponsive"></a>
                                             </div>
                                             <div class="demo-text text-center">New Lookbooks</div>
                                         </div>
                                         <div class="cate-item col-md-4 col-sm-12">
                                             <div class="demo-img">
-                                                <a class="effect-img3 plus-zoom" href="02-Shop_v3.html"><img src="yii2/basic/web/img/collection_3.jpg" alt="" class="img-reponsive"></a>
+                                                <a class="effect-img3 plus-zoom" href="02-Shop_v3.html"><img src="<?= Yii::$app->request->baseUrl ?>/img/collection_3.jpg" alt="" class="img-reponsive"></a>
                                             </div>
                                             <div class="demo-text text-center">Onsale</div>
                                         </div>
@@ -568,7 +467,7 @@ AppAsset::register($this);
                                         <li class="level2 col-6">
                                             <a href="#">Page Set 1</a>
                                             <ul class="menu-level-2">
-                                                <li class="level3"><a href="/yii2/basic/web/site/about" title="About Us">About Us</a></li>
+                                                <li class="level3"><a href="<?=Yii::$app->request->baseUrl?>/site/about" title="About Us">About Us</a></li>
                                                 <li class="level3"><a href="05-Contact.html" title="Contact">Contact</a></li>
                                                 <li class="level3"><a href="08-My-Account.html" title="My Account">My Account</a></li>
                                                 <li class="level3"><a href="09-Check-out.html" title="Check out">Check out</a></li>
@@ -613,7 +512,7 @@ AppAsset::register($this);
                                 </a>
                             </div>
                             <div class="element element-user hidden-xs hidden-sm">
-                                <a href="#" class="zoa-icon js-user">
+                                <a href="/site/login" class="zoa-icon ">
                                     <svg width="19" height="20" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 102.8" style="enable-background:new 0 0 100 102.8;" xml:space="preserve">
                                             <g>
                                                 <path d="M75.7,52.4c-2.1,2.3-4.4,4.3-7,6C82.2,58.8,93,69.9,93,83.5v12.3H7V83.5c0-13.6,10.8-24.7,24.3-25.1c-2.6-1.7-5-3.7-7-6
@@ -682,14 +581,14 @@ AppAsset::register($this);
     <div class="slide v2">
         <div class="js-slider-v3">
             <div class="slide-img">
-                <img src="yii2/basic/web/img/slide/slider-1-home-2.png" alt="" class="img-responsive">
+                <img src="<?= Yii::$app->request->baseUrl ?>/img/slide/slider-1-home-2.png" alt="" class="img-responsive">
                 <div class="box-center content1">
                     <h3>New Arrivals</h3>
                     <a href="" class="slide-btn">Shop Now</a>
                 </div>
             </div>
             <div class="slide-img">
-                <img src="yii2/basic/web/img/slide/slider-1-home-9.png" alt="" class="img-responsive">
+                <img src="<?= Yii::$app->request->baseUrl ?>/img/slide/slider-1-home-9.png" alt="" class="img-responsive">
                 <div class="box-center content1">
                     <h3>New Arrivals</h3>
                     <a href="" class="slide-btn">Shop Now</a>
@@ -707,7 +606,7 @@ AppAsset::register($this);
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="banner-img">
                         <a href="" class="effect-img3 plus-zoom">
-                            <img src="yii2/basic/web/img/home2/category-1.png" alt="">
+                            <img src="<?= Yii::$app->request->baseUrl ?>/img/home2/category-1.png" alt="">
                         </a>
                         <div class="box-center content">
                             <h3>≥ trend</h3>
@@ -718,7 +617,7 @@ AppAsset::register($this);
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="banner-img">
                         <a href="" class="effect-img3 plus-zoom">
-                            <img src="yii2/basic/web/img/home2/category-2.png" alt="">
+                            <img src="<?= Yii::$app->request->baseUrl ?>/img/home2/category-2.png" alt="">
                         </a>
                         <div class="box-center content">
                             <h3>≥ hot</h3>
@@ -735,7 +634,7 @@ AppAsset::register($this);
             <div class="row engoc-row-equal">
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="yii2/basic/web/img/product/product_1.jpg" alt="" class="img-responsive"></a>
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_1.jpg" alt="" class="img-responsive"></a>
                         <div class="ribbon zoa-hot"><span>Hot</span></div>
                         <div class="product-button-group">
                             <a href="#" class="zoa-btn zoa-quickview">
@@ -760,7 +659,7 @@ AppAsset::register($this);
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="yii2/basic/web/img/product/product_2.jpg" alt="" class="img-responsive"></a>
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_2.jpg" alt="" class="img-responsive"></a>
                         <div class="ribbon zoa-hot"><span>Hot</span></div>
                         <div class="product-button-group">
                             <a href="#" class="zoa-btn zoa-quickview">
@@ -785,7 +684,7 @@ AppAsset::register($this);
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="yii2/basic/web/img/product/product_3.jpg" alt="" class="img-responsive"></a>
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_3.jpg" alt="" class="img-responsive"></a>
                         <div class="ribbon zoa-sale"><span>-15%</span></div>
                         <div class="product-button-group">
                             <a href="#" class="zoa-btn zoa-quickview">
@@ -815,7 +714,7 @@ AppAsset::register($this);
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="yii2/basic/web/img/product/product_4.jpg" alt="" class="img-responsive"></a>
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_4.jpg" alt="" class="img-responsive"></a>
                         <div class="ribbon zoa-hot"><span>Hot</span></div>
                         <div class="product-button-group">
                             <a href="#" class="zoa-btn zoa-quickview">
@@ -840,7 +739,7 @@ AppAsset::register($this);
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="yii2/basic/web/img/product/product_5.jpg" alt="" class="img-responsive"></a>
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_5.jpg" alt="" class="img-responsive"></a>
                         <div class="ribbon zoa-new"><span>New</span></div>
                         <div class="product-button-group">
                             <a href="#" class="zoa-btn zoa-quickview">
@@ -865,7 +764,7 @@ AppAsset::register($this);
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="yii2/basic/web/img/product/product_7.jpg" alt="" class="img-responsive"></a>
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_7.jpg" alt="" class="img-responsive"></a>
                         <div class="ribbon zoa-hot"><span>Hot</span></div>
                         <div class="product-button-group">
                             <a href="#" class="zoa-btn zoa-quickview">
@@ -890,7 +789,7 @@ AppAsset::register($this);
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="yii2/basic/web/img/product/product_8.jpg" alt="" class="img-responsive"></a>
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_8.jpg" alt="" class="img-responsive"></a>
                         <div class="ribbon zoa-hot"><span>Hot</span></div>
                         <div class="product-button-group">
                             <a href="#" class="zoa-btn zoa-quickview">
@@ -915,7 +814,7 @@ AppAsset::register($this);
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="yii2/basic/web/img/product/product_9.jpg" alt="" class="img-responsive"></a>
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_9.jpg" alt="" class="img-responsive"></a>
                         <div class="product-button-group">
                             <a href="#" class="zoa-btn zoa-quickview">
                                 <span class="zoa-icon-quick-view"></span>
@@ -939,7 +838,7 @@ AppAsset::register($this);
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="yii2/basic/web/img/product/product_10.jpg" alt="" class="img-responsive"></a>
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_10.jpg" alt="" class="img-responsive"></a>
                         <div class="product-button-group">
                             <a href="#" class="zoa-btn zoa-quickview">
                                 <span class="zoa-icon-quick-view"></span>
@@ -963,7 +862,7 @@ AppAsset::register($this);
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="yii2/basic/web/img/product/product_11.jpg" alt="" class="img-responsive"></a>
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_11.jpg" alt="" class="img-responsive"></a>
                         <div class="ribbon zoa-trend"><span>Trend</span></div>
                         <div class="product-button-group">
                             <a href="#" class="zoa-btn zoa-quickview">

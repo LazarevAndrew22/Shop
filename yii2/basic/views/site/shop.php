@@ -1099,7 +1099,7 @@
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-15 col-lg-15 product-item">
                     <div class="product-img">
-                        <a href=""><img src="<?= Yii::$app->request->baseUrl ?>/img/product/product_15.jpg" alt=""
+                        <a href=""><img src="<?= Yii::$app->request->baseUrl?>/img/product/product_15.jpg" alt=""
                                         class="img-responsive"></a>
                         <div class="ribbon zoa-trend"><span>Trend</span></div>
                         <div class="product-button-group">

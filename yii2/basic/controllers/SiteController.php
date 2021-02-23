@@ -92,7 +92,7 @@ class SiteController extends Controller
     {
         $model = new LoginForm();
         if ($model->load($this->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->redirect('/users');
         }
 
         $model->password = '';
@@ -137,11 +137,12 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
+
         return $this->render('about');
     }
 
 
-    public function actionShop()
+    public function actionShop(): string
     {
         return $this->render('Shop');
     }
